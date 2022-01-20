@@ -5,8 +5,8 @@ import os
 import numpy as np
 from pydub import AudioSegment
 import scipy.io.wavfile as wavfile
-import featureExtraction as FE
-import trainAudio as TA
+from . import featureExtraction as FE
+from . import trainAudio as TA
 
 
 def read_audio_file(input_file):

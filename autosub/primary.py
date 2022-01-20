@@ -12,9 +12,9 @@ import numpy as np
 from deepspeech import Model
 from tqdm import tqdm
 
-from audioProcessing import extract_audio, convert_samplerate
-from segmentAudio import silenceRemoval
-from writeToFile import write_to_file
+from .audioProcessing import extract_audio, convert_samplerate
+from .segmentAudio import silenceRemoval
+from .writeToFile import write_to_file
 
 # Line count for SRT file
 line_count = 1
@@ -104,7 +104,7 @@ def ds_process_audio(ds, audio_file, output_file_handle_dict, split_duration):
         output_file_handle_dict['txt'].write("\n\n")
 
 
-def main():
+def dostuff():
     global line_count
     print("AutoSub\n")
     
@@ -288,5 +288,7 @@ def main():
         file_handle.close()
 
 
-if __name__ == "__main__":
-    main()
+if __name__ == '__main__':
+    print('This program is being run by itself')
+else:
+    print('I am being imported from another module')
